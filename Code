@@ -1,0 +1,29 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+
+
+netflix_df = pd.read_csv("netflix_data.csv")
+
+netflix_movies=netflix_df.loc[netflix_df["type"]=="Movie"]
+
+after_1990=netflix_movies[(netflix_movies["release_year"]>=1990)]
+movies_1990s=after_1990[(after_1990["release_year"]<2000)]
+
+plt.hist(movies_1990s["duration"])
+plt.title("MOVIES DURATION IN 1990s")
+plt.xlabel("DURATION IN MINUTES")
+plt.ylabel("NUMBER OF MOVIES")
+plt.show()
+
+duration=100
+
+action_movies_1990s=movies_1990s[(movies_1990s["genre"]=="Action")]
+short_movie_count=0
+
+for label,a in action_movies_1990s.iterrows():
+    if a["duration"]<90:
+        short_movie_count+=1
+    else:
+         short_movie_count+=0
+        
+print(short_movie_count)
