@@ -1,7 +1,10 @@
 # 🎬 Netflix Data Visualization  
 
 ## 📊 About  
-This project analyzes Netflix data to explore movies released in the 1990s. Using Python and data visualization, we uncover trends in movie genres, durations, and more.  
+This project focuses on **movies from the 1990s** using Netflix data.  
+I analyzed:  
+✅ The number of **short movies** (less than 90 minutes)  
+✅ The **most frequent movie durations** using Matplotlib  
 
 ## 🛠️ Tools Used  
 - Python 🐍  
